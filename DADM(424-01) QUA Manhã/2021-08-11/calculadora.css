@@ -1,0 +1,30 @@
+body {
+    background-color: silver;
+    font-family: verdana;
+}
+
+div#conteudo {
+    background-color: white;
+    color: gray;
+    width: 90%;
+    padding: 2%;
+    border: black 1px solid;
+    box-shadow: 5px 5px 5px black;
+    margin: 0 auto;
+}
+
+h1 {
+    /* font-weight: bold; */
+    font-weight: normal;
+}
+
+p {
+    font-size: 11pt;
+    line-height: 20pt;
+}
+
+input {
+    border-radius: 5px;
+    border: gray 1px solid;
+    text-align: right;
+}
