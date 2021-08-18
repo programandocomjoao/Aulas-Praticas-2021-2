@@ -4,18 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-        <title>Página 01</title>
+        <title>Página 06</title>
     </head>
 
     <body>
-        <h1>Primeiro Exemplo em AngularJS</h1>
+        <h1>Expressões em AngularJS</h1>
 
-        <div ng-app="">
-            <p><label for="nome" id="rotNome">Nome:</label>
-            <input type="text" id="nome" ng-model="ngNome">
-            </p>
-
-            <p ng-bind="ngNome"></p>
+        <div ng-app="" ng-init="n1=32; n2=15">
+            <p>A soma de {{ n1 }} + {{ n2 }} é {{ n1 + n2 }}.</p>
         </div>
     </body>
 </html>
