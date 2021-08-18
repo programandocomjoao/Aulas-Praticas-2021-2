@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="calculadora.css">
+        <script src="calculadora.js"></script>
+        <title>Calculadora Fatorial</title>
+    </head>
+
+    <body>
+        <div id="conteudo">
+            <h1>Calculadora Fatorial</h1>
+
+            <form oninput="calcularFatorial()">
+                <fieldset>
+                    <legend>Dados para Calcular</legend>
+
+                    <p><label for="numero">Número:</label>
+                    <input type="text" id="numero" size="5" autofocus>
+                    </p>
+
+                    <hr>
+
+                    <p><label for="F">Fatorial:</label>
+                    <output id="F"></output>
+                    </p>
+                </fieldset>
+
+                <p id="voltar"><a href="calculadora.html">Voltar</a></p>
+            </form>
+        </div>
+    </body>
+</html>

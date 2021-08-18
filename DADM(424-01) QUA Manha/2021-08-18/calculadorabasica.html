@@ -5,34 +5,34 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="stylesheet" href="calculadora.css">
         <script src="calculadora.js"></script>
-        <title>Calculadora de Delta</title>
+        <title>Calculadora Básica</title>
     </head>
 
     <body>
         <div id="conteudo">
-            <h1>Calculadora de Delta</h1>
+            <h1>Calculadora Básica</h1>
 
             <form>
                 <fieldset>
                     <legend>Dados para Calcular</legend>
 
-                    <p><label for="A">Valor de A:</label>
-                    <input type="text" id="A" size="5" autofocus>
+                    <p><label for="n1">Valor 1:</label>
+                    <input type="text" id="n1" size="5" autofocus>
                     </p>
 
-                    <p><label for="B">Valor de B:</label>
-                    <input type="text" id="B" size="5">
-                    </p>
-
-                    <p><label for="C">Valor de C:</label>
-                    <input type="text" id="C" size="5">
+                    <p><label for="n2">Valor 2:</label>
+                    <input type="text" id="n2" size="5">
                     </p>
 
                     <hr>
                     <p>
-                    <input type="button" value="Calcular Delta" onclick="calcularDelta()">
+                    <input type="button" value="+" onclick="calcularOperacao('+')">
+                    <input type="button" value="-" onclick="calcularOperacao('-')">
+                    <input type="button" value="x" onclick="calcularOperacao('x')">
+                    <input type="button" value=":" onclick="calcularOperacao(':')">
+                        
                     <input type="reset" value="Novo Cálculo" onclick="
-                        document.getElementById('A').focus();
+                        document.getElementById('n1').focus();
                     ">
                     </p>
                     <hr>
