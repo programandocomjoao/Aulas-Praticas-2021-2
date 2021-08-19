@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" href="calculadora.css">
+        <script src="calculadora.js"></script>
+        <title>Aplicações Matemáticas</title>
+    </head>
+
+    <body>
+        <div id="conteudo">
+            <h1>Aplicações Matemáticas</h1>
+
+            <form>
+                <fieldset>
+                    <legend>Escolha a Operação</legend>
+
+                    <p><input type="radio" id="basica" name="operacao" value="basica">
+                    <label for="basica">Calculadora Básica</label>
+                    </p>
+
+                    <p><input type="radio" id="delta" name="operacao" value="delta">
+                    <label for="delta">Calculadora de Delta</label>
+                    </p>
+
+                    <p><input type="radio" id="esfera" name="operacao" value="esfera">
+                    <label for="esfera">Calculadora de Esfera</label>
+                    </p>
+
+                    <hr>
+
+                    <p><input type="button" value="Acessar Calculadora" onclick="escolherCalculadora()"></p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

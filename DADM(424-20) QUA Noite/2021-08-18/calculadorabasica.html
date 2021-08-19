@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" href="calculadora.css">
+        <script src="calculadora.js"></script>
+        <title>Calculadora Básica</title>
+    </head>
+
+    <body>
+        <div id="conteudo">
+            <h1>Calculadora Básica</h1>
+
+            <form>
+                <fieldset>
+                    <legend>Dados para Calcular</legend>
+
+                    <p><label for="n1">Valor 1:</label>
+                    <input type="text" id="n1" size="5" autofocus>
+                    </p>
+
+                    <p><label for="n2">Valor 2:</label>
+                    <input type="text" id="n2" size="5">
+                    </p>
+
+                    <hr>
+                    <p>
+                    <input type="button" value="+" onclick="calcularOperacao('+')">
+                    <input type="button" value="-" onclick="calcularOperacao('-')">
+                    <input type="button" value="x" onclick="calcularOperacao('x')">
+                    <input type="button" value=":" onclick="calcularOperacao(':')">
+
+                    <input type="reset" value="Novo Cálculo" onclick="document.getElementById('n1').focus()">
+                    </p>
+                    <hr>
+
+                    <p><label for="resultado">Resultado:</label>
+                    <output id="resultado"></output>
+                    </p>
+                </fieldset>
+
+                <p id="voltar"><a href="calculadora.html">Voltar</a></p>
+            </form>
+        </div>
+    </body>
+</html>
