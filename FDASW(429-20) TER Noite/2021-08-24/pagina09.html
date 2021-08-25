@@ -4,15 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
-        <title>Página 08</title>
+        <title>Página 09</title>
     </head>
 
     <body>
         <h1>Expressões em AngularJS</h1>
 
-        <div ng-app="">
-            <p>Minha primeira expressão: {{ 95 + 23 + 21 + 60 + 25 + 14 + 0.2 }}</p>
-            <p>Minha segunda expressão: {{ 'Maria' + ' ' + 'do Bairro' }}</p>
+        <div ng-app="" ng-init="cor='purple'">
+            <p><label for="color">Digite o nome de uma cor em inglês:</label>
+            <input type="text" id="color" style="background-color: {{ cor }};" ng-model="cor">
+            </p>
         </div>
     </body>
 </html>

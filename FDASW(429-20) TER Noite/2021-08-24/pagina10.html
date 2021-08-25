@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <title>Página 10</title>
+    </head>
+
+    <body>
+        <h1>Expressões Numéricas</h1>
+
+        <div ng-app="" ng-init="A=3; B=10; C=2">
+            <p>O delta com A={{ A }}, B={{ B }} e C={{ C }} é igual a {{ B*B - 4 * A * C }}</p>
+
+            <p>O delta com A={{ A }}, B={{ B }} e C={{ C }} é igual a <span ng-bind="B*B - 4 * A * C"></span></p>
+        </div>
+    </body>
+</html>
