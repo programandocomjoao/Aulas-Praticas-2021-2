@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <title>Página 12</title>
+    </head>
+
+    <body>
+        <h1>Expressões de Objeto</h1>
+
+        <div ng-app="" ng-init="animal1 = {nome: 'Mel', especie: 'Canina', raca: 'Poodle'}; 
+                                animal2 = {nome: 'Betinha', especie: 'Canina', raca: 'Streetdog'}">
+            <p>O nome é {{ animal1.nome }}</p>
+            <p>A espécie é {{ animal1.especie }}</p>
+            <p>A raça é {{ animal1.raca }}</p>
+            <hr>
+            <p>O nome é <span ng-bind="animal2.nome"></span></p>
+            <p>A espécie é <span ng-bind="animal2.especie"></span></p>
+            <p>A raça é <span ng-bind="animal2.raca"></span></p>
+        </div>
+    </body>
+</html>
