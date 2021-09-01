@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <title>Página 19</title>
+    </head>
+
+    <body>
+        <h1>Classificação do Brasileirão 2021</h1>
+
+        <div ng-app="meuApp" ng-controller="meuControlador">
+            <ol>
+                <li ng-repeat="i in times">{{ i }}</li>
+            </ol>
+        </div>
+
+        <script src="meuApp.js"></script>
+        <script>
+            app.controller("meuControlador", 
+                function($scope) {
+                    $scope.times=[
+                        'Atlético-Mg', 
+                        'Palmeiras', 
+                        'Fortaleza', 
+                        'Bragantino', 
+                        'Flamengo'
+                    ];
+                }
+            );
+        </script>
+    </body>
+</html>
