@@ -7,6 +7,14 @@ http.createServer(
             function(err, dados) {
                 res.writeHead(200, {'Content-type':'text/html; charset=utf-8'});    
                 res.write(dados);
+
+                fs.writeFile('arquivo4.txt', dados,
+                    function(err) {
+                        if (err)
+                            throw err;
+                    }
+                );
+
                 res.end();                
             }
         );
