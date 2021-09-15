@@ -4,25 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
-        <title>Página 21</title>
+        <title>Página 27</title>
     </head>
-
+    
     <body>
-        <h1>Diretiva ng-model</h1>
+        <h1>Controladores</h1>
 
         <div ng-app="meuApp" ng-controller="meuControlador">
-            <form>
-                <p><label for="nome">Nome:</label>
-                <input type="text" id="nome" ng-model="nome">
-                </p>
-            </form>
+            <h2 ng-click="trocarNome()">{{ nome }}</h2>
         </div>
 
         <script>
-            var app = angular.module('meuApp', []);
-            app.controller('meuControlador',
+            var app = angular.module("meuApp", []);
+
+            app.controller("meuControlador",
                 function($scope) {
-                    $scope.nome = "Gabriel Duarte";
+                    $scope.nome = "Victor Rocha";
+
+                    $scope.trocarNome = function() {
+                        $scope.nome = "Denys Pinto";
+                    }
                 }
             );
         </script>
