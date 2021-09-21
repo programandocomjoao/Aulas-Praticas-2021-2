@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Página 13</title>
+	</head>
+	
+	<body>
+		<h1>Cadastro de Usuários</h1>
 
+		<form action="">
+			<fieldset>
+				<legend>Identificação do Usuário</legend>
+
+				<p><label for="nome">Nome:</label>
+				<input type="text" id="nome" size="25" maxlength="30" placeholder="Nome completo" autofocus>
+				</p>
+
+				<p><label for="senha">Senha:</label>
+				<input type="password" id="senha" size="8" maxlength="8" placeholder="8 dígitos">
+				</p>
+
+				<p><label for="email">E-mail:</label>
+				<input type="email" id="email" size="30" maxlength="40">
+				</p>
+
+				<fieldset>
+					<legend>Sexo:</legend>
+
+					<input type="radio" id="feminino" name="sexo" value="F">
+					<label for="feminino">Feminino</label>
+
+					<input type="radio" id="masculino" name="sexo" value="M">
+					<label for="masculino">Masculino</label>
+
+					<input type="radio" id="naoinformado" name="sexo" value="N" checked>
+					<label for="naoinformado">Não quero informar</label>
+				</fieldset>
+
+				<p><label for="data">Data de nascimento:</label>
+				<input type="date" id="data">
+				</p>
+
+				<p><label for="hora">Hora de nascimento:</label>
+				<input type="time" id="hora">
+				</p>
+			</fieldset>
+
+			<br>
+
+			<fieldset>
+				<legend>Endereço do Usuário</legend>
+
+				<p><label for="logradouro">Logradouro:</label>
+				<input type="text" id="logradouro" size="30" maxlength="80" placeholder="Rua, Av, Rod, Trav, ...">
+				</p>
+
+				<p><label for="numero">Número:</label>
+				<input type="number" id="numero" min="0" max="99999">
+				</p>
+
+				<p><label for="estado">Estado:</label>
+				<select id="estado">
+					<optgroup label="Região Sudeste">
+						<option value="ES">Espírito Santo</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="SP">São Paulo</option>
+					</optgroup>
+
+					<optgroup label="Região Sul">
+						<option value="PR">Paraná</option>
+						<option value="RS">Rio Grande do Sul</option>
+						<option value="SC">Santa Catarina</option>
+					</optgroup>
+				</select>
+				</p>
+
+				<p><label for="cidade">Cidade:</label>
+				<input type="text" id="cidade" size="30" maxlength="50" list="listacidades">
+				</p>
+
+				<datalist id="listacidades">
+					<option value="Duque de Caxias"></option>
+					<option value="Nova Iguaçu"></option>
+					<option value="Belford Roxo"></option>
+					<option value="Nilópolis"></option>
+					<option value="São João de Meriti"></option>
+					<option value="Magé"></option>
+					<option value="Rio de Janeiro"></option>
+					<option value="Niterói"></option>
+					<option value="Mesquita"></option>
+					<option value="Rio Bonito"></option>
+					<option value="Nova Hamburgo"></option>
+					<option value="Rio Claro"></option>
+					<option value="São Gonçalo"></option>
+					<option value="Paracambi"></option>
+					<option value="Seropédica"></option>
+				</datalist>
+			</fieldset>
+
+			<br>
+
+			<fieldset>
+				<legend>Características do Usuário</legend>
+
+				<p><label for="regioes">Regiões Onde Pretende atuar:</label><br>
+				<select id="regioes" size="5" multiple>
+					<option value="CO">Região Centro-Oeste</option>
+					<option value="NE">Região Nordeste</option>
+					<option value="NO">Região Norte</option>
+					<option value="SE">Região Sudeste</option>
+					<option value="SU">Região Sul</option>
+				</select>
+				</p>
+
+				<p><label for="curriculo">Digite o seu mini-currículo:</label><br>
+				<textarea id="curriculo" cols="45" rows="10"></textarea>
+				</p>
+
+				<p><label for="nivel">De 0 a 10 qual o seu nível de conhecimento em programação?</label><br>
+				0 <input type="range" id="nivel" min="0" max="10" step="2"> 10
+				</p>
+
+				<fieldset>
+					<legend>Idiomas que domina:</legend>
+
+					<input type="checkbox" id="ingles" name="idiomas" value="Inglês">
+					<label for="ingles">Inglês</label>
+
+					<input type="checkbox" id="espanhol" name="idiomas" value="Espanhol">
+					<label for="espanhol">Espanhol</label>
+
+					<input type="checkbox" id="italiano" name="idiomas" value="Italiano">
+					<label for="italiano">Italiano</label>
+
+					<input type="checkbox" id="frances" name="idiomas" value="Francês">
+					<label for="frances">Francês</label>
+				</fieldset>
+
+				<p><label for="foto">Foto de perfil:</label>
+				<input type="file" id="foto">
+				</p>
+
+				<p><label for="cor">Cor do Perfil:</label>
+				<input type="color" id="cor" onchange="document.bgColor=this.value">
+				</p>
+
+				<p><label for="cor2">Cor do Texto:</label>
+				<input type="color" id="cor2" onchange="document.fgColor=this.value">
+				</p>
+			</fieldset>
+
+			<input type="hidden" id="datacadastro" value="20/09/2021 - 21:06:00">
+
+			<p>
+			<input type="submit" value="Cadastrar Usuário">
+			<input type="reset" value="Limpar Campos">
+			<input type="button" value="Ver Mensagem" onclick="window.alert('Obrigado pelo cadastro')">
+			</p>
+		</form>
+	</body>
+</html>
