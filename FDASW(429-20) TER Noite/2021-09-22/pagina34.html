@@ -4,14 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
-        <title>Página 28</title>
+        <title>Página 34</title>
     </head>
     
     <body>
-        <h1>Escopo AngularJS</h1>
+        <h1>Filtros AngularJS</h1>
 
         <div ng-app="meuApp" ng-controller="meuControlador">
-            <p>O nome é {{ nome }} e nasceu no ano de {{ nasc }}. Portanto, tem {{ calcularIdade() }} anos.</p>
+            <p><label for="nome">Digite o nome:</label>
+            <input type="text" id="nome" ng-model="nome">
+            </p>
+
+            <ul>
+                <li ng-repeat="i in alunos | filter:nome ">
+                    {{ i }}
+                </li>
+            </ul>
         </div>
 
         <script>
@@ -19,12 +27,7 @@
 
             app.controller("meuControlador",
                 function($scope) {
-                    $scope.nome = "Gabriel Duarte";
-                    $scope.nasc = 2003;
-                    $scope.anoa = 2021;
-                    $scope.calcularIdade = function() {
-                        return $scope.anoa - $scope.nasc;
-                    }
+                    $scope.alunos = ['Michelle', 'Danilo', 'Pedro', 'Victor', 'Paulo', 'Bruno','Gabriel'];
                 }
             );
         </script>

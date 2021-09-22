@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
-        <title>Página 28</title>
+        <title>Página 32</title>
     </head>
     
     <body>
-        <h1>Escopo AngularJS</h1>
+        <h1>Filtros AngularJS</h1>
 
         <div ng-app="meuApp" ng-controller="meuControlador">
-            <p>O nome é {{ nome }} e nasceu no ano de {{ nasc }}. Portanto, tem {{ calcularIdade() }} anos.</p>
+            <p>O preço do produto é {{ preco | currency }}</p>
         </div>
 
         <script>
@@ -19,12 +19,8 @@
 
             app.controller("meuControlador",
                 function($scope) {
-                    $scope.nome = "Gabriel Duarte";
-                    $scope.nasc = 2003;
-                    $scope.anoa = 2021;
-                    $scope.calcularIdade = function() {
-                        return $scope.anoa - $scope.nasc;
-                    }
+                    //$scope.preco = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(83.79);
+                    $scope.preco = 83.79;
                 }
             );
         </script>

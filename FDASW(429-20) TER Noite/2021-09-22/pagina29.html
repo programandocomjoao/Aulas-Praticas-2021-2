@@ -4,27 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="angular.min.js"></script>
-        <title>Página 28</title>
+        <title>Página 29</title>
     </head>
     
-    <body>
+    <body ng-app="meuApp">
         <h1>Escopo AngularJS</h1>
 
-        <div ng-app="meuApp" ng-controller="meuControlador">
-            <p>O nome é {{ nome }} e nasceu no ano de {{ nasc }}. Portanto, tem {{ calcularIdade() }} anos.</p>
+        <p>A melhor linguagem do mundo é {{ linguagem }}</p>
+
+        <div ng-controller="meuControlador">
+            <p>A melhor linguagem do mundo é {{ linguagem }}</p>
         </div>
 
         <script>
             var app = angular.module("meuApp", []);
 
+            app.run(
+                function($rootScope) {
+                    $rootScope.linguagem = 'JavaScript';
+                }
+            );
+
             app.controller("meuControlador",
                 function($scope) {
-                    $scope.nome = "Gabriel Duarte";
-                    $scope.nasc = 2003;
-                    $scope.anoa = 2021;
-                    $scope.calcularIdade = function() {
-                        return $scope.anoa - $scope.nasc;
-                    }
+                    $scope.linguagem = 'Python';
                 }
             );
         </script>
