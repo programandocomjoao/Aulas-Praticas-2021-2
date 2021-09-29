@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <link rel="stylesheet" href="calculadora.css">
+        <title>Calculadora de Esfera</title>
+    </head>
+
+    <body>
+        <div id="conteudo" ng-app="meuApp" ng-controller="meuControlador">
+            <h1>Calculadora de Esfera</h1>
+
+            <form>
+                <fieldset>
+                    <legend>Dados para Calcular</legend>
+
+                    <p><label for="raio">Valor do raio:</label>
+                    <input type="text" id="raio" size="5" autofocus ng-model="raio">
+                    </p>
+
+                    <hr>
+                    <p><input type="button" value="Calcular Esfera" ng-click="
+                        calcularComprimento();
+                        calcularArea();
+                        calcularVolume();
+                        "></p>
+                    <hr>
+
+                    <p><label for="C">Comprimento:</label>
+                    <output id="C" ng-bind="comprimento"></output>cm
+                    </p>
+
+                    <p><label for="A">Área:</label>
+                    <output id="A" ng-bind="area"></output>cm<sup>2</sup>
+                    </p>
+
+                    <p><label for="V">Volume:</label>
+                    <output id="V" ng-bind="volume"></output>cm<sup>3</sup>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+
+        <script>
+            var app = angular.module('meuApp', []);
+
+            app.controller('meuControlador',
+                function($scope) {
+                    $scope.calcularComprimento = function() {
+                        $scope.raio = Number($scope.raio);
+                        $scope.comprimento = (2 * Math.PI * $scope.raio).toFixed(2);
+                    }
+
+                    $scope.calcularArea = function() {
+                        $scope.raio = Number($scope.raio);
+                        $scope.area = (Math.PI * Math.pow($scope.raio, 2)).toFixed(2);
+                    }
+
+                    $scope.calcularVolume = function() {
+                        $scope.raio = Number($scope.raio);
+                        $scope.volume = (3/4 * Math.PI * Math.pow($scope.raio, 3)).toFixed(2);
+                    }
+                }
+            );
+        </script>
+    </body>
+</html>

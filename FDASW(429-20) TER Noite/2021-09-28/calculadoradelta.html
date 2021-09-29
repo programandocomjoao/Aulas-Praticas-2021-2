@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>
+        <link rel="stylesheet" href="calculadora.css">
+        <title>Calculadora de Delta</title>
+    </head>
 
+    <body>
+        <div id="conteudo" ng-app="meuApp" ng-controller="meuControlador">
+            <h1>Calculadora de Delta</h1>
+
+            <form>
+                <fieldset>
+                    <legend>Dados para Calcular</legend>
+
+                    <p><label for="A">Valor de A:</label>
+                    <input type="text" id="A" size="5" autofocus ng-model="A">
+                    </p>
+
+                    <p><label for="B">Valor de B:</label>
+                    <input type="text" id="B" size="5" ng-model="B">
+                    </p>
+
+                    <p><label for="C">Valor de C:</label>
+                    <input type="text" id="C" size="5" ng-model="C">
+                    </p>
+
+                    <hr>
+                    <p><input type="button" value="Calcular Delta" ng-click="calcularDelta()"></p>
+                    <hr>
+
+                    <p><label for="resultado">Resultado:</label>
+                    <output id="resultado" ng-bind="resultado"></output>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+
+        <script>
+            var app = angular.module('meuApp', []);
+
+            app.controller('meuControlador',
+                function($scope) {
+                    $scope.calcularDelta = function() {
+                        $scope.A = Number($scope.A);
+                        $scope.B = Number($scope.B);
+                        $scope.C = Number($scope.C);
+
+                        $scope.resultado = Math.pow($scope.B, 2) - 4 * $scope.A * $scope.C;
+                    }
+                }
+            );
+        </script>
+    </body>
+</html>
