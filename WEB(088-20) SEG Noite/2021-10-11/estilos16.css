@@ -1,0 +1,49 @@
+body {
+	background-color: #EEEEEE;
+}
+
+h1 {
+	/* font-family: serif; */
+	/* font-family: sans-serif; */
+	/* font-family: cursive; */
+	/* font-family: monospace; */
+	font-family: fantasy;
+}
+
+h2, p, blockquote, address {
+	font-family: verdana;
+}
+
+p {
+	/* font-size: xx-small; */
+	/* font-size: x-small; */
+	/* font-size: small; */
+	/* font-size: medium; */
+	/* font-size: large; */
+	/* font-size: x-large; */
+	/* font-size: xx-large; */
+	/* font-size: 12px; */
+	font-size: 12pt;
+	/* font-size: 12pc; */
+	/* font-size: 12mm; */
+	/* font-size: 12cm; */
+	line-height: 20pt;
+}
+
+blockquote {
+	font-size: 11pt;
+	font-style: italic;
+}
+
+address {
+	font-size: 10pt;
+	font-style: normal;
+	font-weight: bold;
+	word-spacing: 3pt;
+}
+
+h1, h2 {
+	font-weight: normal;
+	font-variant: small-caps;
+	letter-spacing: 5pt;
+}
