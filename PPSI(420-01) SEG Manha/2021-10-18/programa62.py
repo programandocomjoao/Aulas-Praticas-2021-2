@@ -1,7 +1,11 @@
-# exercício 6 do estudo dirigido sobre estrutura de repetição for
+# variação do exercício 6 do estudo dirigido sobre estrutura de repetição for
 
-for i in range(1, 11):
+resposta = 'S'
+i = 1
+
+while resposta.upper() == 'S':
     print('***** ALUNO', i, '*****')
+    i += 1
 
     n1 = float(input('Digite a nota 1: '))
     n2 = float(input('Digite a nota 2: '))
@@ -14,3 +18,7 @@ for i in range(1, 11):
         print('Aluno Aprovado!')
     else:
         print('Aluno Reprovado!')
+
+    resposta = input('Deseja continuar<S/N>: ')
+
+print('***** FIM DO PROGRAMA *****')
