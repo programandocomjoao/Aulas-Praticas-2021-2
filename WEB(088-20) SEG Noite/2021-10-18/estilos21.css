@@ -1,0 +1,26 @@
+body {
+	font-family: verdana;
+	font-size: 11pt;
+}
+
+input:focus {
+	background-color: silver;
+}
+
+fieldset {
+	border-width: 3px;
+	border-color: gray;
+	border-style: solid;
+	/* border-style: double; */
+	/* border-style: groove; */
+	/* border-style: ridge; */
+	/* border-style: outset; */
+	/* border-style: inset; */
+	/* border-style: dotted; */
+	/* border-style: dashed; */
+}
+
+input, select, textarea {
+	border: black 1px solid;
+	border-radius: 5px;
+}

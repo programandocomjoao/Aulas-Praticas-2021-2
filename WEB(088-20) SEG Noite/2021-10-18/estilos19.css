@@ -1,0 +1,19 @@
+body {
+	font-family: verdana;
+	font-size: 11pt;
+	background-color: rgb(255, 191, 255);
+}
+
+h1 {
+	background-color: purple;
+	color: #EEEEEE;
+}
+
+p {
+	color: purple;
+}
+
+a {
+	background-color: pink;
+	color: rgb(0, 0, 0);
+}

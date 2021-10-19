@@ -1,0 +1,35 @@
+body {
+	font-family: verdana;
+	background-image: url('imagens/stars.jpg');
+	/* background-repeat: repeat; */
+	/* background-repeat: repeat-x; */
+	/* background-repeat: repeat-y; */
+	background-repeat: no-repeat;
+	/* background-position: 100px 50px; */
+	background-position: center center;
+	/* background-size: 700px 300px; */
+	background-size: 100% 100%;
+	/* background-attachment: scroll; */
+	background-attachment: fixed;
+}
+
+h1, h2 {
+	color: silver;
+}
+
+p, blockquote, address {
+	color: #EEEEEE;
+}
+
+p {
+	font-size: 11pt;
+	line-height: 20pt;
+}
+
+blockquote {
+	font-size: 11pt;
+}
+
+address {
+	font-size: 10pt;
+}
