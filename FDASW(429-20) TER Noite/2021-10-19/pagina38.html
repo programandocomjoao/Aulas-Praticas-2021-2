@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 38</title>
+    </head>
+
+    <body>
+        <h1>Aula de React</h1>
+
+        <script>
+            class Carro {
+                constructor(nome) {
+                    this.marca = nome;
+                }
+
+                exibirMsg() {
+                    return 'A montadora é ' + this.marca;
+                }
+            }
+
+            class Modelo extends Carro {
+                constructor(nome, mod) {
+                    super(nome);
+                    this.mod = mod;
+                }
+
+                msgFinal() {
+                    return this.exibirMsg() + ' e o modelo é ' + this.mod;
+                }
+            }
+
+            meuCarro = new Modelo("Fiat", "Siena");
+
+            document.write(meuCarro.msgFinal());
+        </script>
+    </body>
+</html>

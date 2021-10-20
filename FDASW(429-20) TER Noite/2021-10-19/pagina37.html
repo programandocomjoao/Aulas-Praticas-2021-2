@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 37</title>
+    </head>
+
+    <body>
+        <h1>Aula de React</h1>
+
+        <script>
+            class Carro {
+                constructor(nome) {
+                    this.marca = nome;
+                }
+
+                exibirMsg() {
+                    return 'A montadora é ' + this.marca;
+                }
+            }
+
+            meuCarro = new Carro("Fiat");
+
+            document.write(meuCarro.marca + "<br>");
+            document.write(meuCarro.exibirMsg());
+        </script>
+    </body>
+</html>
