@@ -1,0 +1,26 @@
+body {
+	font-family: verdana;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	width: 150px;
+}
+
+ul a {
+	background-color: #333333;
+	color: white;
+	display: block;
+	text-decoration: none;
+	border-bottom: white 1px solid;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 5px;
+}
+
+ul a:hover {
+	background-color: #CCCCCC;
+	color: #333333;
+}

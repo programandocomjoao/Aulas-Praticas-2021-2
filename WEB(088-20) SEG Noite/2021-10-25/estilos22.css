@@ -1,0 +1,22 @@
+body {
+	font-family: verdana;
+}
+
+table {
+	font-size: 11pt;
+	border-width: 2px;
+	border-color: gray;
+	border-style: solid;
+	border-spacing: 5px;
+}
+
+th {
+	border: blue 2px dotted;
+}
+
+td {
+	border-left: red 2px solid;
+	border-top: green 5px double;
+	border-right: orange 3px dotted;
+	border-bottom: purple 2px dashed;
+}
