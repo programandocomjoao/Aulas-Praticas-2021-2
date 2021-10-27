@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página 39</title>
+        <title>Página 40</title>
     </head>
 
     <body>
-        <h1>Funções em JS</h1>
+        <h1>Arrow Functions em JS</h1>
 
         <p id="msg"></p>
 
         <script>
-            informar = function() {
+            informar = () => {
                 return "Aprender JS é construir o futuro!";
             }
+
+            document.getElementById('msg').innerHTML = "Mensagem Oculta";
         </script>
 
         <input type="button" value="Exibir Mensagem" onclick="

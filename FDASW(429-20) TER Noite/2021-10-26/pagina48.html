@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 48</title>
+    </head>
+
+    <body id="corpo">
+        <h1>This na Função Arrow (Com Parâmetro)</h1>
+
+        <p id="msg"></p>
+        <button id="botao">Trocar Cor</button>
+        <input type="color" id="cor">
+
+        <script>
+            class Fundo {
+                constructor() {
+                    this.cor = 'red';
+                }
+
+                trocarCor = () => {
+                    document.getElementById('msg').innerHTML = document.getElementById('cor').value;
+                    document.getElementById('corpo').style.backgroundColor = document.getElementById('cor').value;
+                }
+            }
+
+            meuFundo = new Fundo();
+
+            window.addEventListener("load", meuFundo.trocarCor);
+            document.getElementById('botao').addEventListener("click", meuFundo.trocarCor);
+        </script>
+
+        
+    </body>
+</html>

@@ -3,22 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página 39</title>
+        <title>Página 42</title>
     </head>
 
     <body>
-        <h1>Funções em JS</h1>
+        <h1>Passagem de Parâmetros</h1>
 
         <p id="msg"></p>
 
         <script>
-            informar = function() {
-                return "Aprender JS é construir o futuro!";
+            informar = (nome) => {
+                return "Seja bem-vindo(a) " + nome;
             }
+
+            document.getElementById('msg').innerHTML = "Mensagem Oculta";
         </script>
 
         <input type="button" value="Exibir Mensagem" onclick="
-            document.getElementById('msg').innerHTML = informar();
+            document.getElementById('msg').innerHTML = informar('Danilo');
         ">
     </body>
 </html>

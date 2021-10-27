@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 45</title>
+    </head>
+
+    <body>
+        <h1>Mini-Calculadora</h1>
+
+        <p id="msg"></p>
+
+        <script>
+            somar = (n1, n2) => "Soma = " + (n1 + n2);
+            subtrair = (n1, n2) => "Subtração = " + (n1 - n2);
+            multiplicar = (n1, n2) => "Multiplicação = " + (n1 * n2);
+            dividir = (n1, n2) => "Divisão = " + (n1 / n2).toFixed(2);
+
+            document.getElementById('msg').innerHTML = "Resultado";
+        </script>
+
+        <input type="text" id="n1" size="5">
+        <input type="text" id="n2" size="5">
+
+        <input type="button" value="+" onclick="
+            var n1 = Number(document.getElementById('n1').value);
+            var n2 = Number(document.getElementById('n2').value);
+
+            document.getElementById('msg').innerHTML = somar(n1, n2);
+        ">
+
+        <input type="button" value="-" onclick="
+            var n1 = Number(document.getElementById('n1').value);
+            var n2 = Number(document.getElementById('n2').value);
+
+            document.getElementById('msg').innerHTML = subtrair(n1, n2);
+        ">
+
+        <input type="button" value="x" onclick="
+            var n1 = Number(document.getElementById('n1').value);
+            var n2 = Number(document.getElementById('n2').value);
+
+            document.getElementById('msg').innerHTML = multiplicar(n1, n2);
+        ">
+
+        <input type="button" value=":" onclick="
+        var n1 = Number(document.getElementById('n1').value);
+        var n2 = Number(document.getElementById('n2').value);
+
+        document.getElementById('msg').innerHTML = dividir(n1, n2);
+        ">
+    </body>
+</html>
