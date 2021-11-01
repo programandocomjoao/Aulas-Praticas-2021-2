@@ -1,7 +1,7 @@
 # exercício 4 do estudo dirigido sobre estrutura de repetição while
 
 soma = 0
-nota = 0
+nota = float(input('Digite a nota: '))
 qtd = 0
 
 while nota >= 0 and nota <= 10:
@@ -9,4 +9,7 @@ while nota >= 0 and nota <= 10:
     qtd = qtd + 1
     nota = float(input('Digite a nota: '))
 
-print('A média é', round(soma/(qtd-1), 2))
+if qtd == 0:
+    print('Não foi digitada nenhuma nota válida!')
+else:
+    print('A média é', round(soma/qtd, 2))
