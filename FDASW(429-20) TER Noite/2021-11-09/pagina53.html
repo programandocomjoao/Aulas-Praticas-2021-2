@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 53</title>
+    </head>
+    
+    <body>
+        <h1>Operador Spread</h1>
+
+        <script>
+            const carro = {
+                marca: 'Fiat',
+                modelo: 'Uno',
+                cor: 'vermelho'
+            }
+
+            const carroAtual = {
+                ano: 1997,
+                cor: 'amarelo'
+            }
+
+            const carroCompleto = {...carro, ...carroAtual}
+
+            console.log(carroCompleto);
+        </script>
+
+        <p><script>document.write('Marca: ' + carroCompleto.marca);</script></p>
+        <p><script>document.write('Modelo: ' + carroCompleto.modelo);</script></p>
+        <p><script>document.write('Cor: ' + carroCompleto.cor);</script></p>
+        <p><script>document.write('Ano: ' + carroCompleto.ano);</script></p>
+    </body>
+</html>

@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 49</title>
+    </head>
+    
+    <body>
+        <h1>Desestruturação de Array</h1>
 
+        <script>
+            function calcular(a, b) {
+                var soma = a + b;
+                var subt = a - b;
+                var mult = a * b;
+                var divi = a / b;
+
+                return [soma, subt, mult, divi];
+            }
+
+            const [a, b, c, d] = calcular(10, 4);
+        </script>
+
+        <p>Soma: <script>document.write(a)</script></p>
+        <p>Subtração: <script>document.write(b)</script></p>
+        <p>Multiplicação: <script>document.write(c)</script></p>
+        <p>Divisão: <script>document.write(d)</script></p>
+    </body>
+</html>

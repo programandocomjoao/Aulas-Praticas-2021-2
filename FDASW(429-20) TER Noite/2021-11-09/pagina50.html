@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página 50</title>
+    </head>
+    
+    <body>
+        <h1>Desestruturação de Objeto</h1>
+
+        <p id="paragrafo"></p>
+
+        <script>
+            const animal = {
+                nome: 'Mel',
+                idade: 13,
+                especie: 'canina',
+                raca: 'poodle',
+                dono: 'Danilo'
+            }
+
+            function exibirAnimal({nome, idade, especie, raca, dono}) {
+                var mensagem = `O animal ${nome} tem ${idade} anos. É da espécie ${especie} e da raça ${raca}. E pertence a ${dono}.`;
+
+                document.getElementById('paragrafo').innerHTML = mensagem;
+            }
+        </script>
+
+        <p><input type="button" value="Ver Mensagem" onclick="exibirAnimal(animal);"></p>
+    </body>
+</html>
