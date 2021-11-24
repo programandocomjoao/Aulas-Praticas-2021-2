@@ -13,11 +13,22 @@ const TelaInicial = () => {
     );
 }
 
+const TelaSobre = () => {
+    return(
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Meu App!!!</Text>
+            <Text>Versão 1.0</Text>
+            <Text>Desenvolvido por Jota Pê</Text>
+        </View>
+    );
+}
+
 const App = () => {
     return(
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Início">
                 <Stack.Screen name="Início" component={TelaInicial} />
+                <Stack.Screen name="Sobre" component={TelaSobre} />
             </Stack.Navigator>
         </NavigationContainer>
     );
