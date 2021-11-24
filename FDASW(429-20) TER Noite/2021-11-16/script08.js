@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+function SubTitulo() {
+  return <h2>Componentes React</h2>;
+}
+
 ReactDOM.render(
-  <p>Alô Mundo!</p>,
+  <SubTitulo />,
   document.getElementById('root')
 );
