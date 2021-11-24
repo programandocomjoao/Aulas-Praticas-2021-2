@@ -1,0 +1,46 @@
+body {
+	background-color: silver;
+	font-family: verdana;
+}
+
+h1, h2 {
+	font-weight: normal;
+}
+
+p {
+	font-size: 11pt;
+	text-align: justify;
+	text-indent: 50px;
+	line-height: 20pt;
+}
+
+blockquote {
+	font-size: 11pt;
+	text-align: right;
+	line-height: 16pt;
+	font-style: italic;
+}
+
+li {
+	font-size: 11pt;
+	font-variant: small-caps;
+}
+
+address {
+	font-size: 10pt;
+	text-align: center;
+	font-style: normal;
+}
+
+div#conteudo, div#barra {
+	background-color: white;
+	/* width: 700px; */
+	width: 90%;
+	height: 100%;
+	/* padding: 10px; */
+	padding: 2%;
+	border: black 1px solid;
+	/* margin: 20px; */
+	margin: 0 auto;
+	box-shadow: 5px 5px 5px black;
+}
